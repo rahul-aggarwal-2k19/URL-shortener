@@ -10,7 +10,7 @@ urlForm.addEventListener("submit", (e) => {
   resultMessage.textContent = "Loading...";
 
   const inputURL = url.value;
-  fetch("http://localhost:3000/url_shortener?url=" + inputURL).then(
+  fetch("/url_shortener?url=" + inputURL).then(
     (response) => {
       response.json().then((data) => {
         if (data.error) {
